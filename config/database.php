@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'oracle'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -92,21 +92,7 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
-        'oracle' => [
-            'driver' => 'oracle',
-            'host' => '10.12.4.95',
-            'port' => '1521',
-            'service_name' => 'DEVDB01',
-            'username' => 'MOA_ADMIN',
-            'password' => 'S34TRT16LMIS522ADM1N05P28TBS',
-            'charset' => 'utf8',
-            'prefix' => '',
-            'tns'            => env('DB_TNS', ''),
-            'database'       => env('DB_DATABASE', ''),
-            'prefix_schema'  => env('DB_SCHEMA_PREFIX', ''),
-            'edition'        => env('DB_EDITION', 'ora$base'),
-            'server_version' => env('DB_SERVER_VERSION', '11g'),
-        ],
+
     ],
 
     /*
