@@ -50,7 +50,8 @@ Route::post('/logout',[AuthController::class,'logout']);
 
 Route::prefix('admin')->middleware('auth:admin')->group(function (){
 
-    // commit mousab salah
+
+    // commit mousab salah asdasd
     Route::get('export_deliveries_export', [\App\Http\Controllers\Admin\ExportExcelController::class, 'exportDeliveriesExport'])->withoutMiddleware('auth:admin');
     Route::get('export_kitchen_today_export', [\App\Http\Controllers\Admin\ExportExcelController::class, 'exportKitchenTodayExport'])->withoutMiddleware('auth:admin');
     Route::get('export_quantities_today', [\App\Http\Controllers\Admin\ExportExcelController::class, 'exportQuantitiesToday'])->withoutMiddleware('auth:admin');
