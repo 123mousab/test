@@ -20,6 +20,7 @@ class AuthController extends Controller
 
     public function index()
     {
+
         $items = Admin::query()->orderByDesc('id')->paginate(10);
 
         return Response::success(200, $items)->mapInto(AdminResource::class)->withPagination()->send();
