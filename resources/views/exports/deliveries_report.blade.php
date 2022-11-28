@@ -1,0 +1,30 @@
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>company</th>
+        <th>mobile</th>
+        <th>city</th>
+        <th>delegate_name</th>
+        <th>branch</th>
+        <th>period</th>
+        <th>notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach($data as $item)
+        <tr>
+            <td>{{$item['customer']['id']}}</td>
+            <td>{{$item['customer']['name']}}</td>
+            <td>{{$item['deliveries']['company']}}</td>
+            <td>{{$item['customer']['mobile']}}</td>
+            <td>{{$item['deliveries']['city']}}</td>
+            <td>{{$item['deliveries']['delegate_name']}}</td>
+            <td>{{$item['deliveries']['branch']}}</td>
+            <td>{{$item['deliveries']['period']}}</td>
+            <td>{{$item['deliveries']['notes']}}</td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>
